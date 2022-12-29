@@ -17,7 +17,6 @@ client.commands = new Collection();
 client.buttons = new Collection();
 client.selectMenus = new Collection();
 client.modals = new Collection();
-client.contexts = new Collection();
 
 // creates command array
 client.commandArray = [];
