@@ -1,0 +1,22 @@
+{
+	"name": "discord_v14_bot_template",
+	"version": "1.0.0",
+	"description": "A basic discordjs v14 bot template. Download and expand",
+	"main": "bot.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cryptogap/Discord_v14_bot_template.git"
+	},
+	"author": "W3U",
+	"license": "Unlicense",
+	"bugs": {
+		"url": "https://github.com/cryptogap/Discord_v14_bot_template/issues"
+	},
+	"homepage": "https://github.com/cryptogap/Discord_v14_bot_template#readme",
+	"dependencies": {
+		"discord.js": "latest"
+	}
+}
