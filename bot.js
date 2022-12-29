@@ -14,6 +14,7 @@ const client = new Client({
 
 // creates a new collection for commands
 client.commands = new Collection();
+client.buttons = new Collection();
 
 // creates command array
 client.commandArray = [];
@@ -29,6 +30,7 @@ for (const folder of functionFolders) {
 
 client.handleEvents();
 client.handleCommands();
+client.handleComponents();
 
 // logs in the bot
 client.login(process.env.DISCORD_BOT_TOKEN);

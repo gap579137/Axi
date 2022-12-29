@@ -17,6 +17,22 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+		} else if (interaction.isButton()) {
+			const { buttons } = client;
+			const { customId } = interaction;
+			const button = buttons.get(customId);
+
+			if (!button) return;
+
+			try {
+				await button.execute(interaction, client);
+			} catch (error) {
+				console.error(error);
+				await interaction.reply({
+					content: "There was an error while executing this button!",
+					ephemeral: true,
+				});
+			}
 		}
 	},
 };
