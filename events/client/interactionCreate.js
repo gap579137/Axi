@@ -68,6 +68,22 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+		} else if (interaction.isContextMenuCommand()) {
+			const { commands } = client;
+			const { commandName } = interaction;
+			const contextCommand = commands.get(commandName);
+
+			if (!contextCommand) return new Error("Context command not found!");
+
+			try {
+				await contextCommand.execute(interaction, client);
+			} catch (error) {
+				console.error(error);
+				await interaction.reply({
+					content: "There was an error while executing this context menu!",
+					ephemeral: true,
+				});
+			}
 		}
 	},
 };
