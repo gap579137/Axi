@@ -33,6 +33,22 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+		} else if (interaction.isStringSelectMenu()) {
+			const { selectMenus } = client;
+			const { customId } = interaction;
+			const selectMenu = selectMenus.get(customId);
+
+			if (!selectMenu) return;
+
+			try {
+				await selectMenu.execute(interaction, client);
+			} catch (error) {
+				console.error(error);
+				await interaction.reply({
+					content: "There was an error while executing this select menu!",
+					ephemeral: true,
+				});
+			}
 		}
 	},
 };

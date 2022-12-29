@@ -15,6 +15,7 @@ const client = new Client({
 // creates a new collection for commands
 client.commands = new Collection();
 client.buttons = new Collection();
+client.selectMenus = new Collection();
 
 // creates command array
 client.commandArray = [];
