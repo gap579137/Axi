@@ -6,7 +6,7 @@ module.exports = {
 			const { commandName } = interaction;
 			const command = commands.get(commandName);
 
-			if (!command) return;
+			if (!command) return new Error("Command not found!");
 
 			try {
 				await command.execute(interaction, client);
@@ -22,7 +22,7 @@ module.exports = {
 			const { customId } = interaction;
 			const button = buttons.get(customId);
 
-			if (!button) return;
+			if (!button) return new Error("Button not found!");
 
 			try {
 				await button.execute(interaction, client);
@@ -38,7 +38,7 @@ module.exports = {
 			const { customId } = interaction;
 			const selectMenu = selectMenus.get(customId);
 
-			if (!selectMenu) return;
+			if (!selectMenu) return new Error("Select menu not found!");
 
 			try {
 				await selectMenu.execute(interaction, client);
