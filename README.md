@@ -1,6 +1,6 @@
 # Axi
 
-<img src="https://raw.githubusercontent.com/cryptogap/Axi/main/logo/bot_logo.png" alt="drawing" style="width:200px;"/>
+<img src="https://raw.githubusercontent.com/cryptogap/Axi/main/logo/bot_logo.png" alt="drawing" style="width:250px;"/>
 
 ![GitHub top language](https://img.shields.io/github/languages/top/cryptogap/axi) ![GitHub repo file count](https://img.shields.io/github/directory-file-count/cryptogap/axi) ![GitHub repo size](https://img.shields.io/github/repo-size/cryptogap/axi) ![Lines of code](https://img.shields.io/tokei/lines/github/cryptogap/axi?label=lines%20of%20code) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/cryptogap/axi)
 
