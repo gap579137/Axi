@@ -1,6 +1,6 @@
 {
 	"name": "discord_v14_bot_template",
-	"version": "1.0.0",
+	"version": "1.1.5",
 	"description": "A basic discordjs v14 bot template. Download and expand",
 	"main": "bot.js",
 	"scripts": {
