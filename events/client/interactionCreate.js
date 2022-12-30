@@ -4,6 +4,7 @@ const { InteractionType } = require("discord.js");
 module.exports = {
 	name: "interactionCreate",
 	async execute(interaction, client) {
+		//This section controls the interaction commands
 		if (interaction.isChatInputCommand()) {
 			const { commands } = client;
 			const { commandName } = interaction;
@@ -20,6 +21,7 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+			//This section controls the buttons
 		} else if (interaction.isButton()) {
 			const { buttons } = client;
 			const { customId } = interaction;
@@ -36,6 +38,7 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+			//This section controls the select menus
 		} else if (interaction.isStringSelectMenu()) {
 			const { selectMenus } = client;
 			const { customId } = interaction;
@@ -52,6 +55,7 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+			//This section controls the modals
 		} else if (interaction.type == InteractionType.ModalSubmit) {
 			const { modals } = client;
 			const { customId } = interaction;
@@ -68,6 +72,7 @@ module.exports = {
 					ephemeral: true,
 				});
 			}
+			//This section controls the context menus
 		} else if (interaction.isContextMenuCommand()) {
 			const { commands } = client;
 			const { commandName } = interaction;

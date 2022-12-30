@@ -5,6 +5,7 @@ const fs = require("fs");
 
 module.exports = (client) => {
 	client.handleCommands = async () => {
+		//This section loops through the commands folder and registers all the commands
 		const commandFolders = fs.readdirSync("./commands");
 		for (const folder of commandFolders) {
 			const commandFiles = fs
@@ -16,7 +17,8 @@ module.exports = (client) => {
 				const command = require(`../../commands/${folder}/${file}`);
 				commands.set(command.data.name, command);
 				commandArray.push(command.data.toJSON());
-				console.log("🚀 ~ file: commandHandler.js:16", command.data.name);
+				//This console.log is optional, but it's useful for debugging.
+				console.log("🚀 ~ file: commandHandler.js:20", command.data.name);
 			}
 		}
 

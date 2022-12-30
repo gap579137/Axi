@@ -1,3 +1,5 @@
+//This is the response handerler for the modal fav_discord.js
+
 module.exports = {
 	data: {
 		name: "fav_discord",

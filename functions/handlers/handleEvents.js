@@ -22,11 +22,11 @@ module.exports = (client) => {
 								event.execute(...args, client)
 							);
 						}
-						break;
-
-						// default:
-						//     break;
 					}
+					break;
+
+				default:
+					break;
 			}
 		}
 	};
