@@ -1,5 +1,6 @@
 const { EmbedBuilder } = require("discord.js");
 
+//This is the response handerler for the select menu info.command.js
 module.exports = {
 	data: {
 		name: "info_menu",
