@@ -1,6 +1,8 @@
 // pulls in the .env file
 require("dotenv").config();
 
+const welcome = require("./clientOn/welcome");
+
 // pulls in the discord.js module
 const { Client, Collection, GatewayIntentBits } = require("discord.js");
 
@@ -9,7 +11,12 @@ const fs = require("fs");
 
 // creates a new client
 const client = new Client({
-	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.GuildMembers,
+		GatewayIntentBits.DirectMessages,
+	],
 });
 
 // creates a new collection for commands
@@ -29,6 +36,9 @@ for (const folder of functionFolders) {
 	for (const file of functionFiles)
 		require(`./functions/${folder}/${file}`)(client);
 }
+
+//send a message to a specific channel when someone is invited to the server
+welcome(client);
 
 client.handleEvents();
 client.handleCommands();
